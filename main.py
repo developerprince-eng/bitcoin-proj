@@ -18,8 +18,12 @@ def main():
     df1 = df1.iloc[::-1]
     df2 = df2.iloc[::-1]
 
-    df1.plot(kind='line', x='Date', y='High', ax=ax, label='BitCoin')
-    df2.plot(kind='line', x='Date', y='High', ax=ax, label='Ethereum')
+    df1.plot(kind='line', x='Date', y='High', ax=ax, label='BitCoin-High')
+    df2.plot(kind='line', x='Date', y='High', ax=ax, label='Ethereum-High')
+    df2.plot(kind='line', x='Date', y='Close', ax=ax, label='Ethereum-Close')
+    df1.plot(kind='line', x='Date', y='Close', ax=ax, label='BitCoin-Close')
+    df1.plot(kind='line', x='Date', y='Open', ax=ax, label='BitCoin-Open')
+    df2.plot(kind='line', x='Date', y='Open', ax=ax, label='Ethereum-Open')
 
     plt.show()
 
